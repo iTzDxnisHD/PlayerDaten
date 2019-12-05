@@ -26,7 +26,7 @@ class pd extends PluginBase implements Listener{
             $today = new \DateTime("now");
             $config = new Config($this->getDataFolder() . $event->getPlayer()->getName() . ".yml", Config::YAML);
             $config->set("Name", $event->getPlayer()->getName());
-            $config->set("IP-Adresse", $event->getPlayer()->getAdress());
+            $config->set("IP-Adresse", $event->getPlayer()->getAddress());
             $config->set("Erster-Join", $today->format("d.m.Y H:i"));
             $config->save();
         }
